@@ -9,16 +9,7 @@ import session from "@/models/session.model";
 import user from "@/models/user.model";
 import app from "@/server";
 
-type testUser = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  password: string;
-  phoneNumber: string;
-};
-
 let mongo: MongoMemoryServer;
-let testUser: testUser;
 let refreshToken: string;
 
 beforeAll(async () => {

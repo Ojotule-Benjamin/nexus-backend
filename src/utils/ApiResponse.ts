@@ -1,4 +1,3 @@
-import type { Response } from "express";
 import { STATUS } from "@/constants/statusCodes";
 import type { ApiResponseOptions } from "../types/index.ds.ts";
 

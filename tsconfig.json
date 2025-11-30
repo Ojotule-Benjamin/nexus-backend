@@ -3,7 +3,6 @@
     "baseUrl": ".",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "ignoreDeprecations": "6.0",
     "module": "CommonJS", // Use CommonJS for Node.js
     "moduleResolution": "node",
     "outDir": "dist",

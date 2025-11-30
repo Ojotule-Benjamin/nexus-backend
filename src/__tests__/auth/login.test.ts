@@ -7,9 +7,10 @@ import { STATUS } from "@/constants/statusCodes";
 import user from "@/models/user.model";
 import app from "@/server";
 
+const TEST_PASSWORD = "Password123@";
 let mongo: MongoMemoryServer;
 
-const secret = process.env.LOGIN_TEST_SECRET ?? "";
+const secret = TEST_PASSWORD ?? "";
 
 beforeAll(async () => {
   mongo = await MongoMemoryServer.create();

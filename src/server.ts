@@ -14,7 +14,7 @@ const port = process.env.PORT || 2000;
 app.use(express.json()); // Middleware to parse JSON bodies
 app.use(cookieParser()); // Middleware to parse cookies
 
-app.get(getApiPath("/features"), (req: Request, res: Response) => {
+app.get(getApiPath("/features"), (_req: Request, res: Response) => {
   return res.status(STATUS.OK).json({
     features: features,
     message: "Features fetched successfully",
@@ -23,7 +23,7 @@ app.get(getApiPath("/features"), (req: Request, res: Response) => {
 
 app.use(getApiPath("/auth"), authRoutes);
 
-app.use((error: AppError, req: Request, res: Response, next: NextFunction) => {
+app.use((error: AppError, _req: Request, res: Response, _next: NextFunction) => {
   res.status(error.status || 500).json({
     message: error.message || "An error occurred",
     stack: process.env.NODE_ENV === "development" ? error.stack : undefined,

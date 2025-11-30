@@ -30,9 +30,12 @@
   "linter": {
     "enabled": true,
     "rules": {
+      "complexity": {
+        "noStaticOnlyClass": "off"
+      },
       "recommended": true,
       "suspicious": {
-        "noConsole": "warn"
+        "noConsole": "off"
       }
     }
   },
