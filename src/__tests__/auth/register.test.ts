@@ -47,6 +47,7 @@ describe("Auth API", () => {
         email: "john@example.com",
         lastName: "Doe",
         middleName: "Asake",
+        nin: "12345678901",
         password: "Password123@",
       });
     expect(res.status).toEqual(STATUS.BAD_REQUEST);
@@ -59,6 +60,7 @@ describe("Auth API", () => {
         email: "john@example.com",
         firstName: "Doe",
         middleName: "Asake",
+        nin: "12345678901",
         password: "Password123@",
       });
     expect(res.status).toEqual(STATUS.BAD_REQUEST);
@@ -71,6 +73,7 @@ describe("Auth API", () => {
         firstName: "Doe",
         lastName: "Doe",
         middleName: "Asake",
+        nin: "12345678901",
         password: "Password123@",
         phoneNumber: "07062568765",
       });
@@ -85,6 +88,7 @@ describe("Auth API", () => {
         firstName: "Doe",
         lastName: "Doe",
         middleName: "Asake",
+        nin: "12345678901",
         phoneNumber: "07062568765",
       });
     expect(res.status).toEqual(STATUS.BAD_REQUEST);
@@ -98,6 +102,7 @@ describe("Auth API", () => {
         firstName: "Doe",
         lastName: "Doe",
         middleName: "Asake",
+        nin: "12345678901",
         password: "Password123@",
       });
     expect(res.status).toEqual(STATUS.BAD_REQUEST);
@@ -108,6 +113,7 @@ describe("Auth API", () => {
       email: "john@example.com",
       firstName: "John",
       lastName: "Doe",
+      nin: "12345678901",
       password: "Password123@",
       phoneNumber: "07062568765",
     });
@@ -118,6 +124,7 @@ describe("Auth API", () => {
         email: "john@example.com",
         firstName: "John",
         lastName: "Doe",
+        nin: "12345678901",
         password: "Password123@",
         phoneNumber: "07062568765",
       });
@@ -133,7 +140,7 @@ describe("Auth API", () => {
         email: "john@example.com",
         firstName: "Doe",
         middleName: "Asake",
-        nin: "1234567890ABCD",
+        nin: "12345678901",
         password: "Password123@",
       });
     expect(res.status).toEqual(STATUS.BAD_REQUEST);
@@ -150,6 +157,7 @@ describe("Auth API", () => {
         isVerified: false,
         lastName: "Doe",
         middleName: "Asake",
+        nin: "12345678901",
         password: "Password123@",
         phoneNumber: "07062568765",
         role: "user",

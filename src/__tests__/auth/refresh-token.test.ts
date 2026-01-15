@@ -23,6 +23,7 @@ beforeAll(async () => {
     email: "john@gmail.com",
     firstName: "John",
     lastName: "Doe",
+    nin: 12345678901,
     password: hashedPassword,
     phoneNumber: "07065453423",
   });
@@ -96,7 +97,6 @@ describe("Auth API Endpoints - Refresh Token, and Logout Functionality", () => {
 
   it("should return 400 on logout if token missing", async () => {
     const res = await request(app).post(getApiPath("/auth/logout")).send({});
-
     expect(res.status).toBe(STATUS.BAD_REQUEST);
   });
 });

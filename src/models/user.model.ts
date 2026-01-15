@@ -32,6 +32,7 @@ const userSchema = new mongoose.Schema<IUser>(
     nin: {
       required: true,
       type: Number,
+      unique: true,
     },
     password: {
       required: true,

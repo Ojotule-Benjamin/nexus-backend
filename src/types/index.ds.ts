@@ -15,7 +15,7 @@ export interface IUser extends Document {
   role: "user" | "admin";
   isVerified: boolean;
   refreshToken?: string;
-  nin?: number;
+  nin: number;
 }
 
 export interface ISession extends Document {
