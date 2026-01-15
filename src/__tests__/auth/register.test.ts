@@ -126,6 +126,19 @@ describe("Auth API", () => {
     expect(res.body.message).toBe("User already exists");
   });
 
+  it("should fail when nin contains characters", async () => {
+    const res = await request(app)
+      .post(`${getApiPath("/auth/register")}`)
+      .send({
+        email: "john@example.com",
+        firstName: "Doe",
+        middleName: "Asake",
+        nin: "1234567890ABCD",
+        password: "Password123@",
+      });
+    expect(res.status).toEqual(STATUS.BAD_REQUEST);
+  });
+
   it("Should register a new user on POST /api/v1/auth/register", async () => {
     const res = await request(app)
       .post(`${getApiPath("/auth/register")}`)
