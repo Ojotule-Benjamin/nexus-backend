@@ -29,6 +29,11 @@ const userSchema = new mongoose.Schema<IUser>(
     middleName: {
       type: String,
     },
+    nin: {
+      required: true,
+      type: Number,
+      unique: true,
+    },
     password: {
       required: true,
       type: String,

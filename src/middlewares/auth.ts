@@ -1,4 +1,4 @@
-import express, { type NextFunction, type Response } from "express";
+import type { NextFunction, Response } from "express";
 import jwt from "jsonwebtoken";
 import { STATUS } from "@/constants/statusCodes";
 import type { AuthRequest, IUser } from "@/types/index.ds";
@@ -17,7 +17,7 @@ export const auth = (req: AuthRequest, res: Response, next: NextFunction) => {
     next();
   } catch (error) {
     return ApiResponse.error({
-      message: "Token is invalid or expired",
+      message: error instanceof Error ? error.message : "Unknown error",
       res,
       status: STATUS.UNAUTHORIZED,
     });

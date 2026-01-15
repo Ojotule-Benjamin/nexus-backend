@@ -24,6 +24,7 @@ export const register = async (req: Request, res: Response) => {
     phoneNumber,
     role,
     isVerified,
+    nin,
   } = req.body;
 
   try {
@@ -47,6 +48,7 @@ export const register = async (req: Request, res: Response) => {
       isVerified: isVerified,
       lastName: lastName,
       middleName: middleName ?? undefined,
+      nin: nin ?? undefined,
       password: hashed,
       phoneNumber: phoneNumber,
       role: role,
@@ -63,6 +65,7 @@ export const register = async (req: Request, res: Response) => {
         isVerified: newUser.isVerified,
         lastName: newUser.lastName,
         middleName: newUser.middleName ?? undefined,
+        nin: newUser.nin ?? undefined,
         phoneNumber: newUser.phoneNumber,
         role: newUser.role,
         state: newUser.state ?? undefined,
